@@ -125,14 +125,14 @@ class SEODataExtension extends DataExtension
 			$tags[] = HTML::createTag('title', [], $record->obj('MetaTitle')->forTemplate());
             $tags[] = HTML::createTag('meta', array(
                 'name' => 'title',
-                'content' => $record->obj('MetaTitle')->forTemplate(),
+                'content' => $record->obj('MetaTitle')->RAW(),
             ));
 		}
 		else {
 			$tags[] = HTML::createTag('title', [], $record->obj('Title')->forTemplate());
             $tags[] = HTML::createTag('meta', array(
                 'name' => 'title',
-                'content' => $record->obj('Title')->forTemplate(),
+                'content' => $record->obj('Title')->RAW(),
             ));
 		}
 
@@ -182,11 +182,11 @@ class SEODataExtension extends DataExtension
 		) {
 			$tags[] = HTML::createTag('meta', [
 				'name' => 'x-page-id',
-				'content' => $record->obj('ID')->forTemplate(),
+				'content' => $record->obj('ID')->RAW(),
 			]);
 			$tags[] = HTML::createTag('meta', [
 				'name' => 'x-cms-edit-link',
-				'content' => $record->obj('CMSEditLink')->forTemplate(),
+				'content' => $record->obj('CMSEditLink')->RAW(),
 			]);
 		}
 
